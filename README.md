@@ -23,7 +23,7 @@ This setup is designed to be extremely low budget. The parts you will need are:
 First, follow the instructions [here](https://ineedcoffee.com/west-bend-popper-2-rewire-coffee-roasting/) to separate the main heating element of your popper from the rest of the popper's circuitry. Now, you can plug the thermocouple breakout directly into the Arduino's pins 2->6. Using the breadboard wire up a circuit so that the digital pin 9 controls the MOSFET which controls the circuit going through the control line on the SSR. Then connect the other end of the SSR to the heating element circuit as shown below:
 ![circuit image](images/20170405_215008.jpg)
 
-That should be everything you need for wiring. If something isn't working I always troubleshoot circuits using an LED. Also, please be extremely careful whenever working with the 120v circuitry in the popcorn popper. 
+That should be everything you need for wiring. If something isn't working, it might be a good idea to troubleshoot circuits using an LED or multimeter. Also, please be extremely careful whenever working with the 120v circuitry of the popcorn popper. 
 
 ## Arduino Setup
 
