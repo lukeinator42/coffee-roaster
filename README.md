@@ -46,7 +46,15 @@ Finally, we need to configure a slider to control the heating element. Under Con
 
 ![artisan-3](images/artisan-3.png)
 
-## PID
+## PID Control
+
+"A proportional–integral–derivative controller (PID controller) is a control loop feedback mechanism (controller) commonly used in industrial control systems. A PID controller continuously calculates an error value e(t) as the difference between a desired setpoint and a measured process variable and applies a correction based on proportional, integral, and derivative terms (sometimes denoted P, I, and D respectively) which give their name to the controller type." - Wikipedia
+
+Artisan can be configured to control the heating slider using a PID controller. To enable PID control, first check the box Control in Config->Device. Then click the blue control button on the main screen, and enter settings as follows:
+
+ ![artisan-4](images/artisan-4.png)
+
+ 
 
 ## Roasting Profile
 
