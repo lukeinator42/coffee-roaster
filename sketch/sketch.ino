@@ -48,7 +48,16 @@ void loop() {
    //Serial.print("C = "); 
    
    au16data[2] = ((uint16_t) thermocouple.readCelsius()*100);
-   analogWrite(led, (au16data[4]/100.0)*255);
+   
    slave.poll( au16data, 16 );
-   delay(500);
+
+   for(int i=1; i<=99; i++) {
+    if(i<=au16data[4])
+      digitalWrite(led, HIGH);
+    else
+      digitalWrite(led, LOW);
+    
+    delay(5);
+   }
+   
 }
