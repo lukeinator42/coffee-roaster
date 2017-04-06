@@ -42,7 +42,9 @@ Then, click ok. Now Artisan will ask for the serial port settings. Enter them as
 
 ![artisan-2](images/artisan-2.png)
 
+Finally, we need to configure a slider to control the heating element. Under Config->Events, select the Sliders tab and set up a slider for the heating element:
 
+![artisan-3](images/artisan-3.png)
 
 ## PID
 
