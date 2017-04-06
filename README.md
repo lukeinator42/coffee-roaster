@@ -64,6 +64,9 @@ To load a background roast, go to Roast->Background and click the load button:
 
  ![artisan-5](images/artisan-5.png)
 
+  ![artisan-6](images/artisan-6.png)
+
+
  You can also play with some of the parameters to sync up the background profile with your roast. To design a profile from scratch, you can open the designer tools at Tools->Designer.
 
 
