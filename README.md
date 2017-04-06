@@ -32,9 +32,17 @@ To setup the Arduino, simply upload the sketch using the Arduino IDE. You will n
 ## Modbus
 Modbus is a serial communication protocol used in lots of industrial equipment, including many industrial coffee roasters. This project uses Modbus so that the Arduino can easily interface with Artisan RoasterScope software as well as any commercial coffee roasting software that supports the Modbus protocol.
 
-The default sketch settings set up a slave at address 1. The temperature is published to register 2, and to control the heating element, we can update register 4. The heating element reads a value in the range 0<=n<=99. 
+The default sketch settings set up a slave at address 1. The temperature is published to register 2, and to control the heating element, we can update register 4. The heating element reads a value in the range 0<=n<=99.
 
 ## Artisan Config
+To configure Artisan RoasterScope, first set up the device under Config->Device:
+![artisan-1](images/artisan-1.png)
+
+Then, click ok. Now Artisan will ask for the serial port settings. Enter them as follows, replacing comm port with the port your arduino is on:
+
+![artisan-2](images/artisan-2.png)
+
+
 
 ## PID
 
