@@ -20,6 +20,8 @@ This setup is designed to be extremely low budget. The parts you will need are:
 
 ## Wiring
 
+First, follow the instructions [here](https://ineedcoffee.com/west-bend-popper-2-rewire-coffee-roasting/) to separate the main heating element of your popper from the rest of the popper's circuitry. 
+
 ## Arduino Setup
 
 ## Modbus
