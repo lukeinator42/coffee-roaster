@@ -67,10 +67,5 @@ To load a background roast, go to Roast->Background and click the load button:
  You can also play with some of the parameters to sync up the background profile with your roast. To design a profile from scratch, you can open the designer tools at Tools->Designer.
 
 
-
-
-
-
 ## Tips
-
-## Credits
+If you live in a cold climate, such as Canada (where I'm from) it will be difficult for the roaster to reach high enough temperatures outside. A tip I learned [here](https://ineedcoffee.com/winter-home-roasting/) is to place the roaster in a box, so that the hot air being dispelled from the roaster is fed back into the air intake. This will help improve your roasts during winter.
