@@ -1,7 +1,4 @@
----
-layout: main
----
-# Arduino Controlled Coffee Roaster {#arduino-controlled-coffee-roaster}
+# Arduino Controlled Coffee Roaster
 
 This repo contains a sketch for interfacing an
 Arduino with [Artisan](https://github.com/artisan-roaster-scope/artisan) RoasterScope. You can use this software to modify a popcorn popper into a computer controlled coffee roaster!
@@ -10,7 +7,7 @@ Arduino with [Artisan](https://github.com/artisan-roaster-scope/artisan) Roaster
 
 
 
-## Parts {#parts}
+## Parts
 This setup is designed to be extremely low budget. The parts you will need are:
 
 - [Arduino](https://www.arduino.cc/en/main/arduinoBoardUno): I used an Arduino Uno
@@ -21,23 +18,23 @@ This setup is designed to be extremely low budget. The parts you will need are:
 - And most importantly: Green Coffee Beans! I've been using beans from a local coffee roaster, but if you want to buy some online you can check out [Sweet Maria's](https://www.sweetmarias.com/)
 
 
-## Wiring {#wiring}
+## Wiring
 
 First, follow the instructions [here](https://ineedcoffee.com/west-bend-popper-2-rewire-coffee-roasting/) to separate the main heating element of your popper from the rest of the popper's circuitry. Now, you can plug the thermocouple breakout directly into the Arduino's pins 2->6. Using the breadboard wire up a circuit so that the digital pin 9 controls the MOSFET which controls the circuit going through the control line on the SSR. Then connect the other end of the SSR to the heating element circuit as shown below:
 ![circuit image](images/20170405_215008.jpg)
 
 That should be everything you need for wiring. If something isn't working, it might be a good idea to troubleshoot circuits using an LED or multimeter. Also, please be extremely careful whenever working with the 120v circuitry of the popcorn popper.
 
-## Arduino Setup {#arduino-setup}
+## Arduino Setup
 
 To setup the Arduino, simply upload the sketch using the Arduino IDE. You will need to add the [MAX6675 library](https://github.com/adafruit/MAX6675-library) and the [ModbusRTU](https://github.com/4-20ma/ModbusMaster) library. You can install both of these using the [Arduino Library Manager](https://www.arduino.cc/en/Guide/Libraries#toc3).
 
-## Modbus {#modbus}
+## Modbus
 Modbus is a serial communication protocol used in lots of industrial equipment, including many industrial coffee roasters. This project uses Modbus so that the Arduino can easily interface with Artisan RoasterScope software as well as any commercial coffee roasting software that supports the Modbus protocol.
 
 The default sketch settings set up a slave at address 1. The temperature is published to register 2, and to control the heating element, we can update register 4. The heating element reads a value in the range 0<=n<=99.
 
-## Artisan Config {#artisan-config}
+## Artisan Config
 To configure Artisan RoasterScope, first set up the device under Config->Device:
 ![artisan-1](images/artisan-1.png)
 
@@ -49,7 +46,7 @@ Finally, we need to configure a slider to control the heating element. Under Con
 
 ![artisan-3](images/artisan-3.png)
 
-## PID Control {#pid-control}
+## PID Control
 
 "A proportional–integral–derivative controller (PID controller) is a control loop feedback mechanism (controller) commonly used in industrial control systems. A PID controller continuously calculates an error value e(t) as the difference between a desired setpoint and a measured process variable and applies a correction based on proportional, integral, and derivative terms (sometimes denoted P, I, and D respectively) which give their name to the controller type." - Wikipedia
 
@@ -61,7 +58,7 @@ Artisan can be configured to control the heating slider using a PID controller. 
 
  Now, follow the steps below to load a roasting profile. During a roast, if you click the blue control box, the PID control will take over the slider and try to match the background roast profile as closely as possible.
 
-## Loading a Roasting Profile {#loading-a-roasting-profile}
+## Loading a Roasting Profile
 
 To load a background roast, go to Roast->Background and click the load button:
 
@@ -70,5 +67,10 @@ To load a background roast, go to Roast->Background and click the load button:
  You can also play with some of the parameters to sync up the background profile with your roast. To design a profile from scratch, you can open the designer tools at Tools->Designer.
 
 
-## Tips {#tips}
-If you live in a cold climate, such as Canada (where I'm from) it will be difficult for the roaster to reach high enough temperatures outside. A tip I learned [here](https://ineedcoffee.com/winter-home-roasting/) is to place the roaster in a box, so that the hot air being dispelled from the roaster is fed back into the air intake. This will help improve your roasts during winter.
+
+
+
+
+## Tips
+
+## Credits
