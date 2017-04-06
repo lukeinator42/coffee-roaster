@@ -54,11 +54,20 @@ Artisan can be configured to control the heating slider using a PID controller. 
 
  ![artisan-4](images/artisan-4.png)
 
- You might want to play with the kp, ki, and kd constants, although tuning PID controllers still seems like a dark art to me. You can also check out [this page](https://innovativecontrols.com/blog/basics-tuning-pid-loops) for some tips on tuning these parameters. 
+ You might want to play with the kp, ki, and kd constants, although tuning PID controllers still seems like a dark art to me. You can also check out [this page](https://innovativecontrols.com/blog/basics-tuning-pid-loops) for some tips on tuning these parameters.
 
  Now, follow the steps below to load a roasting profile. During a roast, if you click the blue control box, the PID control will take over the slider and try to match the background roast profile as closely as possible.
 
 ## Loading a Roasting Profile
+
+To load a background roast, go to Roast->Background and click the load button:
+
+ ![artisan-5](images/artisan-5.png)
+
+ You can also play with some of the parameters to sync up the background profile with your roast. To design a profile from scratch, you can open the designer tools at Tools->Designer.
+
+
+
 
 
 
