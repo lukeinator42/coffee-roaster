@@ -76,3 +76,4 @@ If you live in a cold climate, such as Canada (where I'm from) it will be diffic
 ## Pics
   ![pic](images/20170324_121654.jpg)
   ![pic](images/20170324_142432.jpg)
+  ![roasted coffee pic](images/20170324_152822.jpg)
