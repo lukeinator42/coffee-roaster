@@ -30,6 +30,9 @@ That should be everything you need for wiring. If something isn't working, it mi
 To setup the Arduino, simply upload the sketch using the Arduino IDE. You will need to add the [MAX6675 library](https://github.com/adafruit/MAX6675-library) and the [ModbusRTU](https://github.com/4-20ma/ModbusMaster) library. You can install both of these using the [Arduino Library Manager](https://www.arduino.cc/en/Guide/Libraries#toc3).
 
 ## Modbus
+Modbus is a serial communication protocol used in lots of industrial equipment, including many industrial coffee roasters. This project uses Modbus so that the Arduino can easily interface with Artisan RoasterScope software as well as any commercial coffee roasting software that supports the Modbus protocol.
+
+The default sketch settings set up a slave at address 1. The temperature is published to register 2, and to control the heating element, we can update register 4. The heating element reads a value in the range 0<=n<=99. 
 
 ## Artisan Config
 
