@@ -72,3 +72,7 @@ To load a background roast, go to Roast->Background and click the load button:
 
 ## Tips
 If you live in a cold climate, such as Canada (where I'm from) it will be difficult for the roaster to reach high enough temperatures outside. A tip I learned [here](https://ineedcoffee.com/winter-home-roasting/) is to place the roaster in a box, so that the hot air being dispelled from the roaster is fed back into the air intake. This will help improve your roasts during winter.
+
+## Pics
+  ![pic](images/20170324_121654.jpg)
+  ![pic](images/20170324_142432.jpg)
