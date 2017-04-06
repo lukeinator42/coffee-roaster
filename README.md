@@ -15,7 +15,7 @@ This setup is designed to be extremely low budget. The parts you will need are:
 - [Solid State Relay](https://www.aliexpress.com/item/FREE-SHIPPING-Industrial-FOTEK-Solid-State-Relay-SSR-40A-with-Protective-Flag-SSR-40DA-40A-DC/2035173599.html): I used a 40A SSR for controlling the heating element. 40A is probably overkill, but you probably shouldn't use one less than 25A depending on the wattage of your popcorn popper.
 - MOSFET Transistor: The Arduino digital pins didn't have enough power to control the relay, so I used a mosfet transistor between the digital pin and relay. This might not be an issue depending on your relay though.
 - Tape, Wires, Breadboard, Solder, etc..
-- And most importantly: Green Coffee Beans! I've been using beans from a local coffee roaster, but if you want to buy some online to get started you can check out [Sweet Maria's](https://www.sweetmarias.com/)
+- And most importantly: Green Coffee Beans! I've been using beans from a local coffee roaster, but if you want to buy some online you can check out [Sweet Maria's](https://www.sweetmarias.com/)
 
 
 ## Wiring
