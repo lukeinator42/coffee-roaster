@@ -33,7 +33,7 @@ int gndPin = 6;
 int led = 9;  
   
 void setup() {
-  slave.begin( 19200, SERIAL_8E1 ); // 19200 baud, 8-bits, even, 1-bit stop
+  slave.begin( 19200); // 19200 baud, 8-bits, even, 1-bit stop
   // use Arduino pins 
   pinMode(vccPin, OUTPUT); digitalWrite(vccPin, HIGH);
   pinMode(gndPin, OUTPUT); digitalWrite(gndPin, LOW);
@@ -48,7 +48,7 @@ void loop() {
    //Serial.print("C = "); 
    
    au16data[2] = ((uint16_t) thermocouple.readCelsius()*100);
-   
+  
    slave.poll( au16data, 16 );
 
    for(int i=1; i<=99; i++) {
