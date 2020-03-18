@@ -39,4 +39,5 @@ void loop() {
 
    //write relay value using pwm
    analogWrite(relay, (au16data[4]/100.0)*255);
+   delay(500);
 }
