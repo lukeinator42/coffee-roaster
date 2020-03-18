@@ -1,7 +1,3 @@
-
-// this example is public domain. enjoy!
-// www.ladyada.net/learn/sensors/thermocouple
-
 #include <max6675.h>
 #include <ModbusRtu.h>
 
@@ -18,46 +14,29 @@ uint16_t au16data[16] = {
  */
 Modbus slave(1,0,0); // this is slave @1 and RS-232 or USB-FTDI
 
-
-
-
 int thermoDO = 4;
-int thermoCS = 2;
-int thermoCLK = 3;
+int thermoCS = 5;
+int thermoCLK = 6;
 
 MAX6675 thermocouple(thermoCLK, thermoCS, thermoDO);
-int vccPin = 5;
-int gndPin = 6;
-  
 
-int led = 9;  
+int relay = 9;  
   
 void setup() {
   slave.begin( 19200); // 19200 baud, 8-bits, even, 1-bit stop
   // use Arduino pins 
-  pinMode(vccPin, OUTPUT); digitalWrite(vccPin, HIGH);
-  pinMode(gndPin, OUTPUT); digitalWrite(gndPin, LOW);
-  pinMode(led, OUTPUT);
+  pinMode(relay, OUTPUT);
  delay(500);
   
 }
 
 void loop() {
-  // basic readout test, just print the current temp
-  
-   //Serial.print("C = "); 
-   
+   //write current thermocouple value
    au16data[2] = ((uint16_t) thermocouple.readCelsius()*100);
-  
+
+   //poll modbus registers
    slave.poll( au16data, 16 );
 
-   for(int i=1; i<=99; i++) {
-    if(i<=au16data[4])
-      digitalWrite(led, HIGH);
-    else
-      digitalWrite(led, LOW);
-    
-    delay(5);
-   }
-   
+   //write relay value using pwm
+   analogWrite(relay, (au16data[4]/100.0)*255);
 }
